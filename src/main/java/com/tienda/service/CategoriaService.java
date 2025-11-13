@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class CategoriaService {
     
     @Autowired
-    private CategoriaRepository categoriaRepository;
+    private CategoriaRepository categoriaRepository; //CRUD = C create - R read - U update - D delete
     
     @Transactional(readOnly = true)   //aqui el read only es basicamente diciendole que no quiere que se modifique la lista, solo leer y mostrar 
     public List<Categoria> getCategorias(boolean activo) {
