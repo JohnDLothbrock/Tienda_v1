@@ -50,7 +50,7 @@ public class CategoriaController {
     @PostMapping("/guardar")
     public String guardar(Categoria categoria,
             @RequestParam MultipartFile imagenFile,
-            RedirectAttributes redirectAttributes) {
+            RedirectAttributes redirectAttributes) {  //esto es un redirect para automated pop ups or warnings tipo imagen muy grande o peque
         if (!imagenFile.isEmpty()) { // Si no está vacío... pasaron una imagen...
             categoriaService.save(categoria);
             String rutaImagen = firebaseStorageService
